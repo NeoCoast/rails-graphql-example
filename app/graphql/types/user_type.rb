@@ -11,6 +11,8 @@ module Types
 
     field :full_name, String, null: false
 
+    field :created_at, String, null: false
+
     field :posts, [Types::PostType], null: true, preload: { posts: [:user, { comments: [:user, { replies: [:user] }] }] }
     field :comments, [Types::CommentType], null: true, preload: { comments: [:user, {replies: [:user]}] }
 
