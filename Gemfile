@@ -23,7 +23,7 @@ gem 'puma', '~> 4.3'
 gem 'bootsnap', '~> 1.4', require: false
 
 gem 'graphql', '~> 1.10', '>= 1.10.9'
-gem "graphql-preload", git: "git://github.com/Envek/graphql-preload.git"
+gem "graphql-preload", git: "https://github.com/Envek/graphql-preload.git"
 gem "graphiql-rails", "~> 1.7"
 
 gem 'devise', "~> 4.7"
