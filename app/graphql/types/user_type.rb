@@ -16,6 +16,8 @@ module Types
     field :posts, [Types::PostType], null: true, preload: { posts: [:user, { comments: [:user, { replies: [:user] }] }] }
     field :comments, [Types::CommentType], null: true, preload: { comments: [:user, {replies: [:user]}] }
 
+    field :password, String, null: false
+
     def authentication_token
       if object.id != context[:current_user]&.id
         raise GraphQL::UnauthorizedFieldError,
